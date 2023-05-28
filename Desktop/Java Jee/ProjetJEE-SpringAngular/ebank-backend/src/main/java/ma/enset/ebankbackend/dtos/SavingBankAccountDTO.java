@@ -1,7 +1,6 @@
 package ma.enset.ebankbackend.dtos;
 import lombok.Data;
 import ma.enset.ebankbackend.enums.AccountStatus;
-
 import java.util.Date;
 @Data
 public  class SavingBankAccountDTO extends BankAccountDTO{

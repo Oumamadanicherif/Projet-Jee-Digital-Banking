@@ -1,8 +1,6 @@
 package ma.enset.ebankbackend.dtos;
-
 import lombok.Data;
 import ma.enset.ebankbackend.entities.AccountOperation;
-
 import java.util.List;
 @Data
 public class AccountHistoryDTO {

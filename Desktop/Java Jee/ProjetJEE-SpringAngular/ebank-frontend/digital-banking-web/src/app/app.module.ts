@@ -11,7 +11,9 @@ import {CommonModule} from "@angular/common";
 import {ReactiveFormsModule} from "@angular/forms";
 import { NewCustomerComponent } from './new-customer/new-customer.component';
 import { CustomerAccountsComponent } from './customer-accounts/customer-accounts.component';
-
+import { LoginComponent } from './login/login.component';
+import { AdminTemplateComponent } from './admin-template/admin-template.component';
+import { AuthenticationGuard } from './guards/authentication.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,9 @@ import { CustomerAccountsComponent } from './customer-accounts/customer-accounts
     AccountsComponent,
     NewCustomerComponent,
     CustomerAccountsComponent,
+    LoginComponent,
+    AdminTemplateComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,7 @@ import { CustomerAccountsComponent } from './customer-accounts/customer-accounts
     CommonModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthenticationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

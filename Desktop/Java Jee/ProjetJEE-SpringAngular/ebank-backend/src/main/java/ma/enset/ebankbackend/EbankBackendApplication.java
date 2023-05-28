@@ -28,7 +28,6 @@ import java.util.stream.Stream;
 
 @SpringBootApplication
 public class EbankBackendApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(EbankBackendApplication.class, args);
 	}
@@ -84,8 +83,6 @@ public class EbankBackendApplication {
 		   currentAccount.setCustomer(customer);
 		   currentAccount.setOverDraft(9000);
 		   bankAccountRepository.save(currentAccount);
-
-
 		   SavingAccount savingAccount = new SavingAccount();
 		   savingAccount.setId(UUID.randomUUID().toString());
 		   savingAccount.setBalance(Math.random()*90000);
@@ -94,7 +91,6 @@ public class EbankBackendApplication {
 		   savingAccount.setCustomer(customer);
 		   savingAccount.setInterestRate(5.5);
 		   bankAccountRepository.save(savingAccount);
-
 	   });
 	   bankAccountRepository.findAll().forEach(acc -> {
 		   for (int i = 0; i < 10; i++) {

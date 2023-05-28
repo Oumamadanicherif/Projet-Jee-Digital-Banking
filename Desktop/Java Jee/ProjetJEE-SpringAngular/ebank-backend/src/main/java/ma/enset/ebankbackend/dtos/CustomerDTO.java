@@ -1,7 +1,5 @@
 package ma.enset.ebankbackend.dtos;
-
 import lombok.Data;
-
 @Data
 public class CustomerDTO {
     private Long id;

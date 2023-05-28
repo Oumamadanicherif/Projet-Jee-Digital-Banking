@@ -4,6 +4,7 @@ import {catchError, map, Observable, throwError} from "rxjs";
 import {Customer} from "../model/customer.model";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
+import {AuthentificationService} from "../services/authentification.service";
 
 @Component({
   selector: 'app-customers',
@@ -14,11 +15,11 @@ export class CustomersComponent implements OnInit {
   customers!: Observable<Array<Customer>>;// in ,moment it should be table of objet customer
   errorMessage!: string; //initialiser
   searchformGroup: FormGroup | undefined;
-  constructor(private customerService: CustomerService, private fb : FormBuilder, private router : Router) {
+  constructor(private customerService: CustomerService, private fb : FormBuilder, private router : Router, public authService : AuthentificationService) {
   }
   ngOnInit(): void {
     this.searchformGroup=this.fb.group({
-     keyword : this.fb.control("")
+     keyword : this.fb.control("") //initialisation
     });
     this.handleSearchCustomer();
   }
@@ -54,7 +55,6 @@ export class CustomersComponent implements OnInit {
   }
 
   handeCustomerAccounts(customer: Customer) {
-   this.router.navigateByUrl("customer-accounts/"+customer.id,{state: customer});
-
+   this.router.navigateByUrl("/admin/customer-accounts/"+customer.id,{state: customer});
   }
 }
