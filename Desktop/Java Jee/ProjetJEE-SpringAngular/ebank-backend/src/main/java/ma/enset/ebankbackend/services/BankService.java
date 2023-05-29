@@ -1,13 +1,12 @@
 package ma.enset.ebankbackend.services;
-
-
-import jakarta.transaction.Transactional;
 import ma.enset.ebankbackend.entities.BankAccount;
 import ma.enset.ebankbackend.entities.CurrentAccount;
 import ma.enset.ebankbackend.entities.SavingAccount;
 import ma.enset.ebankbackend.repositories.BankAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
 
 @Service
 @Transactional

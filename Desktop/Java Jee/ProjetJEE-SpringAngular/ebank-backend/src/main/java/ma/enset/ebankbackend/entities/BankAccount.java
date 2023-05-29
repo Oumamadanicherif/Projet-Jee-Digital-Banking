@@ -1,11 +1,10 @@
 package ma.enset.ebankbackend.entities;
-
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ma.enset.ebankbackend.enums.AccountStatus;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 @Entity

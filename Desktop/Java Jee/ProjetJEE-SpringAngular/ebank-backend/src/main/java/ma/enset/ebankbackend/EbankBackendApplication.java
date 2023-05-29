@@ -1,6 +1,4 @@
 package ma.enset.ebankbackend;
-
-import jakarta.transaction.Transactional;
 import ma.enset.ebankbackend.dtos.BankAccountDTO;
 import ma.enset.ebankbackend.dtos.CurrentBankAccountDTO;
 import ma.enset.ebankbackend.dtos.CustomerDTO;
